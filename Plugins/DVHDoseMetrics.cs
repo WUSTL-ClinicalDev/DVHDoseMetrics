@@ -162,7 +162,7 @@ namespace VMS.TPS
                     return Double.NaN;
                 }
                 double d2 = (pi as PlanSetup).GetDoseAtVolume(s, 2, VolumePresentation.Relative, DoseValuePresentation.Absolute).Dose;
-                double d98 = (pi as PlanSetup).GetDoseAtVolume(s, 2, VolumePresentation.Relative, DoseValuePresentation.Absolute).Dose;
+                double d98 = (pi as PlanSetup).GetDoseAtVolume(s, 98, VolumePresentation.Relative, DoseValuePresentation.Absolute).Dose;
                 double hi = ((d2 - d98) / (pi as PlanSetup).TotalPrescribedDose.Dose) * 100;
                 return hi;
             }
